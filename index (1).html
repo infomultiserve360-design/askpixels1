@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumière Photography | Weddings & Events | Bangalore</title>
+<meta name="description" content="Award-winning wedding and event photography in Bangalore. Candid, editorial, and traditional photography packages tailored to your story. Book a free consultation.">
+<meta name="keywords" content="wedding photography bangalore, event photographer bangalore, candid wedding photography, pre-wedding shoot, engagement photography">
+<meta property="og:title" content="Lumière Photography | Weddings & Events">
+<meta property="og:description" content="Award-winning wedding and event photography in Bangalore. Book a free consultation.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://yourdomain.com/">
+
+<!-- Structured Data for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lumière Photography",
+  "description": "Professional wedding and event photography in Bangalore",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN" },
+  "telephone": "+91-XXXXXXXXXX",
+  "priceRange": "₹₹₹",
+  "@type": "Photographer"
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F3EE;
+    --warm-white: #FDFAF7;
+    --deep: #1A1410;
+    --muted: #6B5E52;
+    --accent: #C4956A;
+    --accent-light: #EDD9C3;
+    --border: rgba(100,80,60,0.15);
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--warm-white); color: var(--deep); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 4vw;
+    background: rgba(253,250,247,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.4rem; letter-spacing: 0.04em; color: var(--deep); text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.55rem 1.4rem; border: 1px solid var(--accent); color: var(--accent);
+    background: transparent; text-decoration: none; transition: all 0.2s; cursor: pointer;
+  }
+  .nav-cta:hover { background: var(--accent); color: white; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 1px; background: var(--deep); transition: all 0.3s; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 120px 4vw 80px;
+    background: var(--cream);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; right: -100px; top: -100px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+    opacity: 0.4;
+  }
+  .hero-content { max-width: 640px; position: relative; z-index: 1; }
+  .hero-tag {
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1.5rem; display: block;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem;
+    color: var(--deep);
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p { font-size: 1rem; color: var(--muted); max-width: 480px; margin-bottom: 2.5rem; line-height: 1.8; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 0.9rem 2rem; background: var(--deep); color: var(--cream);
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; transition: all 0.2s; border: 1px solid var(--deep);
+  }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+  .btn-secondary {
+    padding: 0.9rem 2rem; background: transparent; color: var(--deep);
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; border: 1px solid var(--border); transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--deep); }
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .stat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 300; color: var(--deep); display: block; }
+  .stat-label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  /* SECTIONS */
+  section { padding: 6rem 4vw; }
+  .section-tag {
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1rem; display: block;
+  }
+  .section-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 1.5rem; }
+  .section-sub { color: var(--muted); max-width: 520px; margin-bottom: 3rem; }
+
+  /* SERVICES */
+  #services { background: var(--warm-white); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; }
+  .service-card {
+    padding: 2.5rem 2rem; background: var(--cream); position: relative;
+    transition: background 0.3s;
+    border: 1px solid var(--border);
+  }
+  .service-card:hover { background: var(--deep); color: var(--cream); }
+  .service-card:hover .service-desc { color: rgba(253,250,247,0.6); }
+  .service-icon {
+    width: 40px; height: 40px; margin-bottom: 1.5rem;
+    border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .service-card:hover .service-icon { border-color: rgba(196,149,106,0.5); }
+  .service-name { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; margin-bottom: 0.75rem; }
+  .service-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.8; }
+  .service-price {
+    margin-top: 1.5rem; font-size: 0.75rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .service-card:hover .service-price { color: var(--accent-light); }
+
+  /* ABOUT */
+  #about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-image-placeholder {
+    aspect-ratio: 4/5; background: var(--deep);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: rgba(253,250,247,0.3); font-family: var(--serif); font-size: 1.1rem; font-style: italic;
+    position: relative; overflow: hidden;
+  }
+  .about-image-placeholder::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+    background: linear-gradient(transparent, rgba(196,149,106,0.2));
+  }
+  .about-content .quote {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 300; font-style: italic;
+    line-height: 1.5; color: var(--accent); margin-bottom: 2rem;
+    padding-left: 1.5rem; border-left: 2px solid var(--accent);
+  }
+  .about-content p { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; }
+
+  /* PACKAGES */
+  #packages { background: var(--deep); color: var(--cream); }
+  #packages .section-title { color: var(--cream); }
+  #packages .section-sub { color: rgba(253,250,247,0.5); }
+  .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+  .package-card {
+    padding: 2.5rem 2rem; border: 1px solid rgba(253,250,247,0.1); position: relative;
+    transition: border-color 0.3s;
+  }
+  .package-card.featured { border-color: var(--accent); }
+  .package-card.featured::before {
+    content: 'Most Popular';
+    position: absolute; top: -1px; right: 2rem;
+    background: var(--accent); color: white;
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+  }
+  .pkg-name { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; margin-bottom: 0.5rem; }
+  .pkg-price {
+    font-family: var(--serif); font-size: 2.2rem; font-weight: 300; color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+  .pkg-note { font-size: 0.75rem; color: rgba(253,250,247,0.4); margin-bottom: 2rem; }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+  .pkg-features li { font-size: 0.875rem; color: rgba(253,250,247,0.7); padding-left: 1.2rem; position: relative; }
+  .pkg-features li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
+  .btn-outline-light {
+    display: inline-block; padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(253,250,247,0.3); color: var(--cream);
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; transition: all 0.2s; cursor: pointer; background: transparent;
+  }
+  .btn-outline-light:hover, .package-card.featured .btn-outline-light {
+    background: var(--accent); border-color: var(--accent);
+  }
+
+  /* CONTACT/LEAD FORM */
+  #contact { background: var(--cream); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+  .contact-info { padding-top: 1rem; }
+  .contact-detail { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 2rem; }
+  .contact-detail span:first-child { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .contact-detail span:last-child { font-size: 1rem; color: var(--deep); }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label {
+    display: block; font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.85rem 1rem;
+    border: 1px solid var(--border); background: var(--warm-white);
+    font-family: var(--sans); font-size: 0.9rem; color: var(--deep);
+    outline: none; transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--accent);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-submit {
+    width: 100%; padding: 1rem; background: var(--deep); color: var(--cream);
+    font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    border: none; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--accent); }
+  .form-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 0.75rem; }
+  #form-success {
+    display: none; padding: 1.5rem; background: #f0f7f0;
+    border: 1px solid #b8d4b8; color: #2d6a2d; text-align: center; font-size: 0.9rem;
+  }
+
+  /* GALLERY STRIP */
+  .gallery-strip {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px;
+    padding: 0;
+  }
+  .gallery-item {
+    aspect-ratio: 3/4; background: var(--deep); overflow: hidden; cursor: pointer;
+    position: relative;
+  }
+  .gallery-item:nth-child(2) { aspect-ratio: 3/4; }
+  .gallery-item:nth-child(3) { grid-row: span 1; aspect-ratio: 1; }
+  .gallery-item .overlay {
+    position: absolute; inset: 0; background: rgba(196,149,106,0);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s;
+  }
+  .gallery-item:hover .overlay { background: rgba(196,149,106,0.3); }
+  .gallery-placeholder {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-style: italic; color: rgba(253,250,247,0.2); font-size: 0.9rem;
+  }
+  .gp-1 { background: #2a1f18; }
+  .gp-2 { background: #1f2a25; }
+  .gp-3 { background: #251f2a; }
+  .gp-4 { background: #2a2520; }
+  .gp-5 { background: #1a2025; }
+
+  /* FOOTER */
+  footer {
+    background: var(--deep); color: rgba(253,250,247,0.5);
+    padding: 3rem 4vw; display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo { font-family: var(--serif); font-size: 1.3rem; color: var(--cream); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { font-size: 0.75rem; letter-spacing: 0.08em; color: rgba(253,250,247,0.5); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-copy { font-size: 0.75rem; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column; position: fixed;
+      top: 60px; left: 0; right: 0; background: var(--warm-white);
+      padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border);
+    }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-image-placeholder { display: none; }
+    .hero-stats { gap: 2rem; }
+    .gallery-strip { grid-template-columns: repeat(3, 1fr); }
+    .gallery-strip .gallery-item:nth-child(4), .gallery-strip .gallery-item:nth-child(5) { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Lumière</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="hero-tag">Wedding & Event Photography · Bangalore</span>
+    <h1>Every frame<br>tells your <em>story</em></h1>
+    <p>We capture the emotions, the laughter, the tears of joy — not just the moments. Timeless photography for weddings, engagements, and celebrations across India.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+      <a href="#packages" class="btn-secondary">View Packages</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">450+</span>
+        <span class="stat-label">Weddings Shot</span>
+      </div>
+      <div>
+        <span class="stat-num">8</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div>
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Happy Couples</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<div class="gallery-strip" id="gallery" aria-label="Gallery preview">
+  <div class="gallery-item"><div class="gallery-placeholder gp-1">Wedding</div><div class="overlay"></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder gp-2">Portrait</div><div class="overlay"></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder gp-3">Candid</div><div class="overlay"></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder gp-4">Reception</div><div class="overlay"></div></div>
+  <div class="gallery-item"><div class="gallery-placeholder gp-5">Events</div><div class="overlay"></div></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <span class="section-tag">What We Do</span>
+  <h2 class="section-title">Every occasion, beautifully remembered</h2>
+  <p class="section-sub">From intimate ceremonies to grand celebrations, we bring artistry and heart to every shoot.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💍</div>
+      <h3 class="service-name">Wedding Photography</h3>
+      <p class="service-desc">Full-day coverage from haldi to reception. Candid, traditional, and editorial styles — or a blend of all three.</p>
+      <p class="service-price">Starting ₹45,000</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <h3 class="service-name">Pre-Wedding Shoot</h3>
+      <p class="service-desc">Tell your love story before the big day. Outdoor, studio, or destination sessions crafted around your personalities.</p>
+      <p class="service-price">Starting ₹15,000</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎉</div>
+      <h3 class="service-name">Event Coverage</h3>
+      <p class="service-desc">Birthdays, corporate events, product launches, family reunions — comprehensive coverage with quick turnaround.</p>
+      <p class="service-price">Starting ₹12,000</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎬</div>
+      <h3 class="service-name">Wedding Films</h3>
+      <p class="service-desc">Cinematic highlight reels and full-length films. Relive every emotion, every detail, forever.</p>
+      <p class="service-price">Starting ₹35,000</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-placeholder" aria-hidden="true">
+      <span>Your photo here</span>
+    </div>
+    <div class="about-content">
+      <span class="section-tag">About Us</span>
+      <h2 class="section-title">We believe in authentic moments</h2>
+      <p class="quote">"The best photographs are the ones you didn't know were being taken."</p>
+      <p>We're a Bangalore-based photography duo specialising in weddings and events across India. With over 8 years and 450+ weddings, we've learned that no two love stories are the same — and neither should be the photographs.</p>
+      <p>We blend photojournalistic candids with artfully composed portraits, giving you a complete visual narrative of your day. We're quiet observers who know exactly when to step in.</p>
+      <br>
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <span class="section-tag" style="color: rgba(196,149,106,0.8)">Pricing</span>
+  <h2 class="section-title">Transparent, tailored packages</h2>
+  <p class="section-sub">All packages include edited digital files, online gallery, and print release. Custom quotes available.</p>
+  <div class="packages-grid">
+    <div class="package-card">
+      <p class="pkg-name">Silver</p>
+      <p class="pkg-price">₹45,000</p>
+      <p class="pkg-note">Perfect for intimate ceremonies</p>
+      <ul class="pkg-features">
+        <li>6 hours coverage</li>
+        <li>1 photographer</li>
+        <li>300+ edited photos</li>
+        <li>Private online gallery</li>
+        <li>14-day delivery</li>
+      </ul>
+      <button class="btn-outline-light" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+    </div>
+    <div class="package-card featured">
+      <p class="pkg-name">Gold</p>
+      <p class="pkg-price">₹75,000</p>
+      <p class="pkg-note">Our most popular package</p>
+      <ul class="pkg-features">
+        <li>Full day coverage (12 hrs)</li>
+        <li>2 photographers</li>
+        <li>600+ edited photos</li>
+        <li>Pre-wedding shoot (2 hrs)</li>
+        <li>Private online gallery</li>
+        <li>10-day delivery</li>
+      </ul>
+      <button class="btn-outline-light" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+    </div>
+    <div class="package-card">
+      <p class="pkg-name">Platinum</p>
+      <p class="pkg-price">₹1,20,000</p>
+      <p class="pkg-note">The complete experience</p>
+      <ul class="pkg-features">
+        <li>2-day coverage</li>
+        <li>2 photographers + 1 videographer</li>
+        <li>1000+ edited photos</li>
+        <li>Cinematic highlight reel</li>
+        <li>Pre-wedding + engagement shoot</li>
+        <li>Premium photo album</li>
+        <li>7-day delivery</li>
+      </ul>
+      <button class="btn-outline-light" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / LEAD FORM -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's talk about your day</h2>
+      <p class="section-sub" style="margin-bottom: 2.5rem;">Fill in the form and we'll get back to you within 24 hours with availability and a custom quote.</p>
+      <div class="contact-detail">
+        <span>Phone / WhatsApp</span>
+        <span>+91 98XXXXXXXX</span>
+      </div>
+      <div class="contact-detail">
+        <span>Email</span>
+        <span>hello@yourdomain.com</span>
+      </div>
+      <div class="contact-detail">
+        <span>Location</span>
+        <span>Bangalore, Karnataka · Travel across India</span>
+      </div>
+    </div>
+    <div>
+      <div id="form-success">
+        <strong>Thank you!</strong> We've received your enquiry and will be in touch within 24 hours.
+      </div>
+      <!-- Web3Forms: Free, no backend needed. Get your access key at web3forms.com -->
+      <form id="leadForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Photography Enquiry">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Priya & Arjun">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 98765XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option>Wedding Photography</option>
+              <option>Pre-Wedding Shoot</option>
+              <option>Wedding Videography</option>
+              <option>Event Coverage</option>
+              <option>Full Package (Photo + Video)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="event_date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="venue">Venue / Location</label>
+          <input type="text" id="venue" name="venue" placeholder="Venue name and city">
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us More</label>
+          <textarea id="message" name="message" rows="4" placeholder="Budget, vision, special requirements..."></textarea>
+        </div>
+        <!-- Spam protection -->
+        <input type="checkbox" name="botcheck" style="display:none">
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+        <p class="form-note">We respond within 24 hours · No spam, ever</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Lumière Photography</div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Lumière Photography. All rights reserved.</p>
+</footer>
+
+<script>
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Form submission (Web3Forms AJAX)
+  const form = document.getElementById('leadForm');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      const data = await res.json();
+      if (data.success) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Send Enquiry →';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or WhatsApp us directly.');
+      }
+    } catch {
+      btn.textContent = 'Send Enquiry →';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

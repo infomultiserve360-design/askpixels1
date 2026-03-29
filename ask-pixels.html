@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASK Pixels | Wedding & Event Photography | Bangalore</title>
+<meta name="description" content="ASK Pixels — award-winning wedding and event photography in Bangalore. Candid, editorial & traditional photography. Book a free consultation today.">
+<meta name="keywords" content="ASK Pixels, wedding photography bangalore, event photographer bangalore, candid wedding photography, pre-wedding shoot bangalore">
+<meta property="og:title" content="ASK Pixels | Wedding & Event Photography">
+<meta property="og:description" content="Timeless wedding and event photography in Bangalore. Book your free consultation.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://yourdomain.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ASK Pixels",
+  "description": "Professional wedding and event photography in Bangalore",
+  "address": {"@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN"},
+  "telephone": "+91-XXXXXXXXXX",
+  "priceRange": "₹₹₹",
+  "image": "https://yourdomain.com/logo.png"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090A;
+  --bg2:#111114;
+  --bg3:#18181C;
+  --gold:#C9A84C;
+  --gold2:#E8C97A;
+  --gold-dim:rgba(201,168,76,0.15);
+  --gold-glow:rgba(201,168,76,0.06);
+  --cream:#F5F0E8;
+  --muted:rgba(245,240,232,0.45);
+  --muted2:rgba(245,240,232,0.22);
+  --border:rgba(201,168,76,0.18);
+  --border2:rgba(245,240,232,0.08);
+  --serif:'Playfair Display',serif;
+  --sans:'Outfit',sans-serif;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+}
+
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.75;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* CUSTOM CURSOR */
+.cursor{
+  position:fixed;width:8px;height:8px;
+  background:var(--gold);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform .1s var(--ease),opacity .2s;
+  mix-blend-mode:difference;
+}
+.cursor-ring{
+  position:fixed;width:36px;height:36px;
+  border:1px solid rgba(201,168,76,0.5);border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform .18s var(--ease),width .3s,height .3s,opacity .2s;
+}
+.cursor-ring.hovered{width:56px;height:56px;border-color:var(--gold);opacity:.7}
+body:not(.cursor-active) .cursor,body:not(.cursor-active) .cursor-ring{opacity:0}
+
+/* NOISE TEXTURE OVERLAY */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;opacity:.4;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 5vw;
+  transition:background .4s var(--ease),padding .4s var(--ease),backdrop-filter .4s;
+}
+nav.scrolled{
+  background:rgba(9,9,10,0.88);
+  backdrop-filter:blur(20px);
+  padding:.9rem 5vw;
+  border-bottom:1px solid var(--border2);
+}
+
+/* LOGO AREA */
+.nav-logo{
+  display:flex;align-items:center;gap:.75rem;
+  text-decoration:none;
+}
+.logo-mark{
+  width:44px;height:44px;
+  border:1.5px solid var(--gold);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+  transition:border-color .3s;
+}
+.logo-mark::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold-dim);
+}
+/* ---- LOGO PLACEHOLDER ---- */
+/* Replace the <img> inside .logo-mark with your actual logo file.
+   Recommended: SVG or transparent PNG, max 40×40px. */
+.logo-img-placeholder{
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:0.7rem;letter-spacing:.05em;
+  color:var(--gold);font-weight:500;
+  position:relative;z-index:1;
+  text-align:center;line-height:1.1;
+}
+.logo-text{
+  display:flex;flex-direction:column;line-height:1;
+}
+.logo-name{
+  font-family:var(--serif);font-size:1.25rem;font-weight:500;
+  color:var(--cream);letter-spacing:.04em;
+}
+.logo-tagline{
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);font-weight:400;margin-top:2px;
+}
+.nav-logo:hover .logo-mark{border-color:var(--gold2);}
+
+.nav-links{
+  display:flex;align-items:center;gap:2.5rem;list-style:none;
+}
+.nav-links a{
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;
+  transition:color .25s;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;left:0;
+  width:0;height:1px;background:var(--gold);
+  transition:width .3s var(--ease);
+}
+.nav-links a:hover{color:var(--cream);}
+.nav-links a:hover::after{width:100%;}
+
+.nav-cta{
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.6rem 1.4rem;
+  border:1px solid var(--gold);color:var(--gold);
+  background:transparent;text-decoration:none;
+  transition:all .3s var(--ease);
+  position:relative;overflow:hidden;
+}
+.nav-cta::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold);transform:translateX(-101%);
+  transition:transform .3s var(--ease);
+}
+.nav-cta span{position:relative;z-index:1;}
+.nav-cta:hover{color:var(--bg);}
+.nav-cta:hover::before{transform:translateX(0);}
+
+.hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:none;padding:6px;
+}
+.hamburger span{
+  display:block;width:24px;height:1px;
+  background:var(--cream);transition:all .35s var(--ease);
+  transform-origin:center;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:400;
+  background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;
+  transform:translateY(-100%);transition:transform .5s var(--ease);
+}
+.mobile-menu.open{transform:translateY(0);}
+.mobile-menu a{
+  font-family:var(--serif);font-size:2.2rem;font-weight:400;font-style:italic;
+  color:var(--cream);text-decoration:none;opacity:0;
+  transform:translateY(20px);transition:color .25s,opacity .4s,transform .4s;
+}
+.mobile-menu.open a{opacity:1;transform:translateY(0);}
+.mobile-menu.open a:nth-child(1){transition-delay:.1s;}
+.mobile-menu.open a:nth-child(2){transition-delay:.18s;}
+.mobile-menu.open a:nth-child(3){transition-delay:.26s;}
+.mobile-menu.open a:nth-child(4){transition-delay:.34s;}
+.mobile-menu.open a:nth-child(5){transition-delay:.42s;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-divider{width:1px;height:60px;background:var(--border);margin:.5rem 0;}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:120px 5vw 60px;
+  gap:4rem;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 70% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-line{
+  position:absolute;left:50%;top:0;bottom:0;
+  width:1px;background:var(--border2);
+  transform:scaleY(0);transform-origin:top;
+  animation:lineGrow 1.5s 1s var(--ease) forwards;
+}
+@keyframes lineGrow{to{transform:scaleY(1);}}
+
+.hero-left{position:relative;z-index:2;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.75rem;
+  margin-bottom:2rem;
+  opacity:0;animation:fadeUp .8s .3s var(--ease) forwards;
+}
+.eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.eyebrow-text{
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(2.8rem,5.5vw,5rem);
+  font-weight:400;line-height:1.08;
+  margin-bottom:1.75rem;
+  opacity:0;animation:fadeUp .8s .5s var(--ease) forwards;
+}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{
+  font-size:.95rem;color:var(--muted);
+  max-width:440px;margin-bottom:2.5rem;line-height:1.85;
+  opacity:0;animation:fadeUp .8s .7s var(--ease) forwards;
+}
+.hero-actions{
+  display:flex;gap:1rem;flex-wrap:wrap;
+  opacity:0;animation:fadeUp .8s .9s var(--ease) forwards;
+}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.85rem 2rem;background:var(--gold);
+  color:var(--bg);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;font-weight:500;
+  transition:all .3s var(--ease);position:relative;overflow:hidden;
+}
+.btn-gold::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold2);transform:translateX(-101%);
+  transition:transform .3s var(--ease);
+}
+.btn-gold span,.btn-gold svg{position:relative;z-index:1;}
+.btn-gold:hover::before{transform:translateX(0);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.85rem 2rem;background:transparent;
+  color:var(--cream);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--border2);
+  transition:all .3s var(--ease);
+}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(245,240,232,0.05);}
+
+.hero-stats{
+  display:flex;gap:2.5rem;margin-top:3.5rem;
+  padding-top:2rem;border-top:1px solid var(--border2);
+  opacity:0;animation:fadeUp .8s 1.1s var(--ease) forwards;
+}
+.stat-num{
+  font-family:var(--serif);font-size:2rem;font-weight:400;
+  color:var(--cream);display:block;line-height:1;
+}
+.stat-label{
+  font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-top:.35rem;
+}
+
+/* HERO RIGHT — SHOWCASE CARD */
+.hero-right{
+  position:relative;z-index:2;
+  opacity:0;animation:fadeLeft .9s .6s var(--ease) forwards;
+}
+.showcase-frame{
+  position:relative;
+  border:1px solid var(--border);
+  padding:1.5rem;
+  background:var(--bg2);
+}
+.showcase-frame::before{
+  content:'ASK PIXELS';
+  position:absolute;top:-1px;left:2rem;
+  background:var(--bg2);
+  font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--gold);padding:0 .75rem;transform:translateY(-50%);
+}
+.showcase-main{
+  aspect-ratio:4/3;
+  background:var(--bg3);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;margin-bottom:1rem;
+}
+.showcase-placeholder{
+  text-align:center;color:var(--muted2);
+}
+.showcase-placeholder p{font-family:var(--serif);font-style:italic;font-size:1rem;margin-top:.5rem;}
+.showcase-placeholder small{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;}
+/* REPLACE CONTENTS OF .showcase-main WITH: <img src="your-hero-image.jpg" style="width:100%;height:100%;object-fit:cover"> */
+.showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;}
+.sg-item{
+  aspect-ratio:1;background:var(--bg3);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted2);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+  cursor:none;transition:all .3s var(--ease);
+  position:relative;overflow:hidden;
+}
+.sg-item:hover{background:var(--gold-dim);}
+.sg-item::after{
+  content:'';position:absolute;inset:0;
+  background:var(--gold);opacity:0;transition:opacity .3s;
+}
+.sg-item:hover::after{opacity:.06;}
+/* REPLACE .sg-item CONTENTS WITH: <img src="thumb.jpg" style="width:100%;height:100%;object-fit:cover"> */
+
+/* SCROLL INDICATOR */
+.scroll-ind{
+  position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.75rem;
+  opacity:0;animation:fadeUp .8s 1.5s var(--ease) forwards;
+  z-index:2;
+}
+.scroll-line{
+  width:1px;height:50px;background:linear-gradient(var(--gold),transparent);
+  animation:scrollPulse 2s ease-in-out infinite;
+}
+.scroll-text{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted2);}
+@keyframes scrollPulse{0%,100%{opacity:.4;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.1)}}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+
+/* REVEAL ON SCROLL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* SECTION BASE */
+section{padding:7rem 5vw;position:relative;}
+.section-label{
+  display:inline-flex;align-items:center;gap:.75rem;
+  margin-bottom:1.25rem;
+}
+.section-label span{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+.section-label::before{content:'';width:32px;height:1px;background:var(--gold);}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:400;line-height:1.15;
+  margin-bottom:1.25rem;
+}
+.section-sub{color:var(--muted);font-size:.92rem;max-width:520px;margin-bottom:3.5rem;}
+
+/* SERVICES */
+#services{background:var(--bg2);}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1px;
+  background:var(--border2);
+  border:1px solid var(--border2);
+  overflow:hidden;
+}
+.service-card{
+  background:var(--bg2);
+  padding:2.5rem 2rem;
+  position:relative;
+  transition:background .4s var(--ease);
+  overflow:hidden;
+}
+.service-card::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease);
+}
+.service-card:hover{background:var(--bg3);}
+.service-card:hover::before{transform:scaleX(1);}
+.service-num{
+  font-family:var(--serif);font-size:3.5rem;font-weight:400;
+  color:var(--gold-dim);line-height:1;margin-bottom:1.25rem;
+  transition:color .4s;
+}
+.service-card:hover .service-num{color:rgba(201,168,76,0.3);}
+.service-name{
+  font-family:var(--serif);font-size:1.35rem;font-weight:400;
+  margin-bottom:.75rem;
+}
+.service-desc{font-size:.85rem;color:var(--muted);line-height:1.85;}
+.service-price{
+  margin-top:1.5rem;
+  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:.5rem;
+}
+.service-price::before{content:'';flex:1;height:1px;background:var(--border);}
+.service-arrow{
+  position:absolute;bottom:2rem;right:2rem;
+  width:32px;height:32px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:14px;
+  transition:all .3s var(--ease);
+  opacity:0;transform:translate(4px,-4px);
+}
+.service-card:hover .service-arrow{opacity:1;transform:translate(0,0);border-color:var(--gold);color:var(--gold);}
+
+/* MARQUEE */
+.marquee-section{
+  padding:1.5rem 0;overflow:hidden;
+  background:var(--gold);
+  border-top:none;border-bottom:none;
+}
+.marquee-track{
+  display:flex;gap:3rem;
+  animation:marquee 20s linear infinite;
+  width:max-content;
+}
+.marquee-track:hover{animation-play-state:paused;}
+.marquee-item{
+  display:flex;align-items:center;gap:1rem;
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--bg);font-weight:500;white-space:nowrap;
+}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--bg);opacity:.5;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ABOUT */
+#about{background:var(--bg);}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:6rem;align-items:center;
+}
+.about-visual{position:relative;}
+.about-frame{
+  aspect-ratio:3/4;background:var(--bg3);
+  border:1px solid var(--border);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.about-frame-text{
+  text-align:center;color:var(--muted2);font-family:var(--serif);font-style:italic;
+  font-size:1rem;
+}
+/* REPLACE .about-frame CONTENTS WITH: <img src="photographer.jpg" style="width:100%;height:100%;object-fit:cover"> */
+.about-badge{
+  position:absolute;bottom:-1px;right:-1px;
+  background:var(--gold);padding:1.25rem 1.5rem;
+  text-align:center;min-width:120px;
+}
+.badge-num{
+  font-family:var(--serif);font-size:2.2rem;font-weight:400;
+  color:var(--bg);line-height:1;
+}
+.badge-label{
+  font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(9,9,10,0.65);margin-top:.3rem;
+}
+.about-accent-line{
+  position:absolute;top:-24px;left:-24px;right:24px;bottom:24px;
+  border:1px solid var(--border);pointer-events:none;z-index:-1;
+}
+.about-content .quote{
+  font-family:var(--serif);font-size:1.5rem;font-weight:400;
+  font-style:italic;line-height:1.5;
+  color:var(--gold);margin-bottom:2rem;
+  padding-left:1.75rem;border-left:2px solid var(--gold);
+}
+.about-content p{color:var(--muted);font-size:.92rem;margin-bottom:1rem;}
+.about-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.75rem;}
+.about-tag{
+  padding:.35rem 1rem;border:1px solid var(--border);
+  font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);transition:all .25s;
+}
+.about-tag:hover{border-color:var(--gold);color:var(--gold);}
+
+/* GALLERY */
+#gallery{padding:0;background:var(--bg);}
+.gallery-header{padding:5rem 5vw 3rem;}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:repeat(3,180px);
+  gap:3px;
+}
+.gi{
+  background:var(--bg3);position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  cursor:none;
+}
+.gi::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(201,168,76,0);
+  transition:background .4s var(--ease);
+}
+.gi:hover::after{background:rgba(201,168,76,0.12);}
+.gi-label{
+  position:absolute;bottom:1rem;left:1rem;
+  font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(245,240,232,0.3);z-index:1;
+  transition:color .3s;
+}
+.gi:hover .gi-label{color:var(--gold);}
+.gi-ph{color:var(--muted2);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;line-height:1.8;padding:1rem;}
+/* GRID SPANS */
+.gi1{grid-column:1/5;grid-row:1/3;}
+.gi2{grid-column:5/8;grid-row:1/2;}
+.gi3{grid-column:8/10;grid-row:1/2;}
+.gi4{grid-column:10/13;grid-row:1/3;}
+.gi5{grid-column:5/7;grid-row:2/4;}
+.gi6{grid-column:7/10;grid-row:2/3;}
+.gi7{grid-column:1/4;grid-row:3/4;}
+.gi8{grid-column:4/5;grid-row:3/4;}
+.gi9{grid-column:7/10;grid-row:3/4;}
+.gi10{grid-column:10/13;grid-row:3/4;}
+/* Different dark tones for placeholders */
+.t1{background:#141218;}.t2{background:#121618;}.t3{background:#161214;}.t4{background:#141816;}.t5{background:#181412;}.t6{background:#121418;}.t7{background:#161818;}.t8{background:#181618;}.t9{background:#141616;}.t10{background:#161418;}
+
+/* PACKAGES */
+#packages{background:var(--bg2);}
+.packages-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1px;background:var(--border2);
+  border:1px solid var(--border2);overflow:hidden;
+}
+.pkg-card{
+  background:var(--bg2);padding:3rem 2.5rem;
+  position:relative;transition:background .4s;
+  overflow:hidden;
+}
+.pkg-card.featured{background:var(--bg3);}
+.pkg-card:hover{background:var(--bg3);}
+.pkg-popular{
+  position:absolute;top:0;right:0;
+  background:var(--gold);
+  font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--bg);padding:.35rem 1.2rem;font-weight:500;
+}
+.pkg-tier{
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.75rem;
+}
+.pkg-name{
+  font-family:var(--serif);font-size:1.75rem;font-weight:400;
+  margin-bottom:1.25rem;
+}
+.pkg-price-row{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.4rem;}
+.pkg-price{
+  font-family:var(--serif);font-size:2.8rem;font-weight:400;color:var(--cream);
+}
+.pkg-unit{font-size:.8rem;color:var(--muted);}
+.pkg-note{font-size:.78rem;color:var(--muted);margin-bottom:2rem;}
+.pkg-divider{height:1px;background:var(--border2);margin-bottom:2rem;}
+.pkg-features{list-style:none;display:flex;flex-direction:column;gap:.9rem;margin-bottom:2.5rem;}
+.pkg-features li{
+  display:flex;align-items:flex-start;gap:.75rem;
+  font-size:.85rem;color:var(--muted);
+}
+.pkg-features li::before{
+  content:'';flex-shrink:0;
+  width:16px;height:16px;
+  border:1px solid var(--gold);border-radius:50%;margin-top:2px;
+  background:var(--gold-dim);
+}
+.pkg-features li.highlight{color:var(--cream);}
+.pkg-btn{
+  display:block;width:100%;
+  padding:.9rem;text-align:center;
+  font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;transition:all .3s var(--ease);
+  border:1px solid var(--border);color:var(--cream);background:transparent;
+  cursor:none;
+}
+.pkg-card.featured .pkg-btn,
+.pkg-btn:hover{
+  background:var(--gold);border-color:var(--gold);color:var(--bg);font-weight:500;
+}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--bg);overflow:hidden;}
+.testimonials-track{
+  display:flex;gap:1.5rem;
+  overflow-x:auto;scrollbar-width:none;scroll-snap-type:x mandatory;
+  padding-bottom:2rem;
+  -webkit-overflow-scrolling:touch;
+}
+.testimonials-track::-webkit-scrollbar{display:none;}
+.tcard{
+  flex-shrink:0;width:360px;
+  border:1px solid var(--border2);
+  padding:2.5rem;background:var(--bg2);
+  scroll-snap-align:start;
+  transition:border-color .3s;
+}
+.tcard:hover{border-color:var(--border);}
+.tcard-quote{
+  font-family:var(--serif);font-size:3rem;line-height:1;
+  color:var(--gold);margin-bottom:1rem;
+}
+.tcard-text{
+  font-size:.88rem;color:var(--muted);
+  line-height:1.85;margin-bottom:1.75rem;font-style:italic;
+}
+.tcard-author{
+  display:flex;align-items:center;gap:.75rem;
+}
+.tcard-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--bg3);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:.85rem;color:var(--gold);
+}
+.tcard-name{font-size:.85rem;font-weight:500;}
+.tcard-event{font-size:.7rem;color:var(--muted);letter-spacing:.06em;}
+.tcard-stars{display:flex;gap:3px;margin-top:.5rem;}
+.tcard-stars span{font-size:10px;color:var(--gold);}
+.scroll-hint{
+  font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted2);margin-top:.75rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.scroll-hint::after{
+  content:'→';font-size:10px;
+  animation:nudge 2s ease-in-out infinite;
+}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+
+/* CONTACT */
+#contact{background:var(--bg2);}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.5fr;
+  gap:6rem;align-items:start;
+}
+.contact-info{padding-top:1rem;}
+.contact-detail{margin-bottom:2.5rem;}
+.cd-label{
+  font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.5rem;
+}
+.cd-value{font-size:1rem;color:var(--cream);}
+.cd-sub{font-size:.8rem;color:var(--muted);margin-top:.2rem;}
+.contact-social{
+  display:flex;gap:1rem;margin-top:3rem;
+}
+.soc-btn{
+  width:40px;height:40px;border:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:.7rem;letter-spacing:.05em;
+  text-decoration:none;transition:all .3s;
+}
+.soc-btn:hover{border-color:var(--gold);color:var(--gold);}
+/* FORM */
+.form-wrapper{position:relative;}
+.form-group{margin-bottom:1.25rem;}
+.form-group label{
+  display:block;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.5rem;
+}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:.9rem 1.1rem;
+  background:var(--bg3);border:1px solid var(--border2);
+  color:var(--cream);font-family:var(--sans);font-size:.9rem;font-weight:300;
+  outline:none;transition:border-color .3s,background .3s;
+  -webkit-appearance:none;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--muted2);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--gold);background:rgba(201,168,76,0.03);
+}
+.form-group select{color:var(--muted);cursor:none;}
+.form-group select option{background:var(--bg3);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.form-submit{
+  width:100%;padding:1.1rem;
+  background:var(--gold);border:none;
+  color:var(--bg);font-family:var(--sans);font-weight:500;
+  font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;
+  cursor:none;transition:all .3s var(--ease);position:relative;overflow:hidden;
+  margin-top:.5rem;
+}
+.form-submit::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold2);transform:translateX(-101%);
+  transition:transform .3s var(--ease);
+}
+.form-submit span{position:relative;z-index:1;}
+.form-submit:hover::before{transform:translateX(0);}
+.form-note{font-size:.72rem;color:var(--muted2);text-align:center;margin-top:.75rem;}
+.form-success{
+  display:none;padding:2rem;text-align:center;
+  border:1px solid var(--gold);background:rgba(201,168,76,0.05);
+}
+.form-success h3{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem;}
+.form-success p{font-size:.88rem;color:var(--muted);}
+
+/* FLOATING WHATSAPP */
+.wa-float{
+  position:fixed;bottom:2rem;right:2rem;z-index:300;
+  width:54px;height:54px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.35);
+  transition:transform .3s var(--ease),box-shadow .3s;
+  animation:waPulse 3s ease-in-out infinite;
+}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);animation:none;}
+.wa-float svg{width:26px;height:26px;fill:white;}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.35)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.6),0 0 0 8px rgba(37,211,102,0.08)}}
+
+/* FOOTER */
+footer{
+  background:var(--bg);
+  border-top:1px solid var(--border2);
+  padding:4rem 5vw 2rem;
+}
+.footer-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  gap:4rem;margin-bottom:3rem;
+}
+.footer-brand .logo-name{font-size:1.4rem;margin-bottom:.5rem;}
+.footer-brand p{font-size:.82rem;color:var(--muted);max-width:280px;margin-top:.75rem;}
+.footer-col h4{
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.25rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
+.footer-col a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .25s;}
+.footer-col a:hover{color:var(--cream);}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:2rem;border-top:1px solid var(--border2);
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-copy{font-size:.72rem;color:var(--muted2);}
+.footer-made{font-size:.72rem;color:var(--muted2);}
+.footer-made span{color:var(--gold);}
+
+/* BACK TO TOP */
+.btt{
+  position:fixed;bottom:2rem;left:2rem;z-index:300;
+  width:44px;height:44px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:18px;text-decoration:none;
+  background:var(--bg2);transition:all .3s;
+  opacity:0;pointer-events:none;transform:translateY(8px);
+}
+.btt.visible{opacity:1;pointer-events:all;transform:translateY(0);}
+.btt:hover{border-color:var(--gold);color:var(--gold);}
+
+/* PROGRESS BAR */
+.progress-bar{
+  position:fixed;top:0;left:0;height:2px;
+  background:var(--gold);z-index:1000;
+  width:0%;transition:width .1s linear;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;padding-top:100px;gap:3rem;}
+  .hero h1{font-size:clamp(2.5rem,7vw,4rem);}
+  .hero-right{display:none;}
+  .about-grid{grid-template-columns:1fr;gap:3rem;}
+  .about-accent-line{display:none;}
+  .contact-grid{grid-template-columns:1fr;gap:3.5rem;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2.5rem;}
+}
+
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  body{cursor:auto;}
+  .cursor,.cursor-ring{display:none;}
+  section{padding:5rem 5vw;}
+  .hero{padding:90px 5vw 50px;min-height:auto;}
+  .hero h1{font-size:clamp(2.2rem,9vw,3.5rem);}
+  .hero-stats{gap:1.5rem;flex-wrap:wrap;}
+  .services-grid{grid-template-columns:1fr;}
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:auto;
+  }
+  .gi1,.gi2,.gi3,.gi4,.gi5,.gi6,.gi7,.gi8,.gi9,.gi10{
+    grid-column:auto;grid-row:auto;
+  }
+  .gi1,.gi4{aspect-ratio:4/3;}
+  .gi3,.gi5,.gi8,.gi10{display:none;}
+  .packages-grid{grid-template-columns:1fr;}
+  .tcard{width:290px;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;gap:2rem;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .btt{left:auto;right:5rem;}
+  .about-frame{aspect-ratio:4/3;}
+  .about-badge{display:none;}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:2.2rem;}
+  .hero-actions{flex-direction:column;}
+  .btn-gold,.btn-ghost{justify-content:center;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .gi1,.gi2,.gi4,.gi6,.gi7,.gi9{display:flex;}
+  .gi3,.gi5,.gi8,.gi10{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <div class="mobile-divider"></div>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <div class="mobile-divider"></div>
+  <a href="#packages" onclick="closeMobile()">Packages</a>
+  <div class="mobile-divider"></div>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <div class="mobile-divider"></div>
+  <a href="#contact" onclick="closeMobile()">Book Now</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">
+      <!-- =============================================
+           LOGO PLACEMENT
+           Replace the div below with:
+           <img src="logo.png" alt="ASK Pixels Logo" style="width:32px;height:32px;object-fit:contain;position:relative;z-index:1;">
+           or keep SVG logo inline here.
+           ============================================= -->
+      <div class="logo-img-placeholder">
+        ASK<br>PX
+      </div>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">ASK Pixels</span>
+      <span class="logo-tagline">Photography Studio</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta"><span>Book a Session</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Wedding & Event Photography · Bangalore</span>
+    </div>
+
+    <h1>
+      Moments that<br>
+      live <em>forever</em><br>
+      in every frame
+    </h1>
+
+    <p class="hero-sub">
+      ASK Pixels captures the raw emotion, unscripted laughter, and fleeting magic of your most precious days — crafting visual stories that outlast time itself.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn-gold">
+        <span>Book Free Consultation</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 3l5 4-5 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#gallery" class="btn-ghost">
+        <span>View Portfolio</span>
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">450+</span>
+        <span class="stat-label">Weddings</span>
+      </div>
+      <div>
+        <span class="stat-num">8 Yrs</span>
+        <span class="stat-label">Experience</span>
+      </div>
+      <div>
+        <span class="stat-num">12+</span>
+        <span class="stat-label">Awards</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="showcase-frame">
+      <div class="showcase-main">
+        <!-- REPLACE WITH: <img src="hero-image.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+        <div class="showcase-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="margin:0 auto 1rem;display:block;opacity:.3">
+            <rect x="4" y="8" width="32" height="24" rx="2" stroke="#C9A84C" stroke-width="1.2"/>
+            <circle cx="20" cy="20" r="6" stroke="#C9A84C" stroke-width="1.2"/>
+            <circle cx="20" cy="20" r="2" fill="#C9A84C" opacity=".5"/>
+            <rect x="28" y="11" width="5" height="3" rx="1" fill="#C9A84C" opacity=".3"/>
+          </svg>
+          <p>Your hero image here</p>
+          <small>Replace with a stunning wedding photo</small>
+        </div>
+      </div>
+      <div class="showcase-grid">
+        <div class="sg-item t1">Wedding</div>
+        <div class="sg-item t2">Candid</div>
+        <div class="sg-item t3">Portrait</div>
+        <!-- Replace each .sg-item with <img src="thumb.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>Wedding Photography</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Pre-Wedding Shoots</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Candid Moments</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Wedding Films</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Event Coverage</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Destination Weddings</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Engagement Shoots</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>ASK Pixels</span><div class="marquee-dot"></div></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item"><span>Wedding Photography</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Pre-Wedding Shoots</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Candid Moments</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Wedding Films</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Event Coverage</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Destination Weddings</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Engagement Shoots</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>ASK Pixels</span><div class="marquee-dot"></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label reveal"><span>What We Offer</span></div>
+  <h2 class="section-title reveal">Every celebration,<br><em style="font-style:italic;color:var(--gold)">artfully documented</em></h2>
+  <p class="section-sub reveal">From intimate ceremonies to grand multi-day events — we bring precision, passion, and a cinematic eye to every occasion.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <h3 class="service-name">Wedding Photography</h3>
+      <p class="service-desc">Full-day coverage blending photojournalistic candids with artfully composed portraits. We document every ritual, every tear, every burst of joy.</p>
+      <p class="service-price">Starting ₹45,000</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">02</div>
+      <h3 class="service-name">Pre-Wedding Shoot</h3>
+      <p class="service-desc">Tell your love story before the big day. Outdoor, studio, or destination sessions crafted entirely around your chemistry and personalities.</p>
+      <p class="service-price">Starting ₹15,000</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">03</div>
+      <h3 class="service-name">Cinematic Films</h3>
+      <p class="service-desc">Emotional highlight reels and full-length wedding films with professional color grading, original scoring, and drone aerials on request.</p>
+      <p class="service-price">Starting ₹35,000</p>
+      <div class="service-arrow">↗</div>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-num">04</div>
+      <h3 class="service-name">Event Coverage</h3>
+      <p class="service-desc">Birthdays, corporate events, product launches, engagement ceremonies — comprehensive coverage with a 5-day delivery guarantee.</p>
+      <p class="service-price">Starting ₹12,000</p>
+      <div class="service-arrow">↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-accent-line"></div>
+      <div class="about-frame">
+        <!-- REPLACE WITH: <img src="photographer.jpg" alt="ASK Pixels Photographer" style="width:100%;height:100%;object-fit:cover"> -->
+        <div class="about-frame-text">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="margin:0 auto 1rem;display:block;opacity:.2"><circle cx="18" cy="18" r="17" stroke="#C9A84C" stroke-width="1"/><circle cx="18" cy="14" r="5" stroke="#C9A84C" stroke-width="1"/><path d="M7 30c1.5-6 4.5-9 11-9s9.5 3 11 9" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/></svg>
+          <span>Photographer photo here</span>
+        </div>
+      </div>
+      <div class="about-badge">
+        <div class="badge-num">8+</div>
+        <div class="badge-label">Years of<br>Excellence</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-label reveal"><span>Our Story</span></div>
+      <h2 class="section-title reveal">We don't just<br>take photos —<br><em style="font-style:italic;color:var(--gold)">we feel them</em></h2>
+      <p class="quote reveal">"The best photograph is the one you didn't know was being taken."</p>
+      <p class="reveal">ASK Pixels was born from a single belief: that wedding photography should feel like art, not a service. We are a Bangalore-based studio of visual storytellers who live for the in-between moments — the nervous laugh, the grandmother's proud tear, the stolen glance across the mandap.</p>
+      <p class="reveal">Over 8 years and 450+ weddings across India, we've refined an approach that is quiet, respectful, and entirely focused on you — never intrusive, always present.</p>
+      <div class="about-tags reveal">
+        <span class="about-tag">Candid</span>
+        <span class="about-tag">Editorial</span>
+        <span class="about-tag">Traditional</span>
+        <span class="about-tag">Destination</span>
+        <span class="about-tag">Film Style</span>
+        <span class="about-tag">Cinematic</span>
+      </div>
+      <br>
+      <a href="#contact" class="btn-gold" style="display:inline-flex;margin-top:1rem;">
+        <span>Let's create together</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding:0;">
+  <div class="gallery-header">
+    <div class="section-label reveal"><span>Portfolio</span></div>
+    <h2 class="section-title reveal">A glimpse into<br><em style="font-style:italic;color:var(--gold)">our world</em></h2>
+  </div>
+  <div class="gallery-grid">
+    <!-- Replace each .gi-ph div with <img src="photo.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+    <div class="gi gi1 t1"><div class="gi-ph">Wedding · Ceremony</div><span class="gi-label">Wedding</span></div>
+    <div class="gi gi2 t2"><div class="gi-ph">Candid Portrait</div><span class="gi-label">Candid</span></div>
+    <div class="gi gi3 t3"><div class="gi-ph">Detail Shot</div><span class="gi-label">Details</span></div>
+    <div class="gi gi4 t4"><div class="gi-ph">Reception · Couple</div><span class="gi-label">Reception</span></div>
+    <div class="gi gi5 t5"><div class="gi-ph">Pre-Wedding Shoot</div><span class="gi-label">Pre-Wedding</span></div>
+    <div class="gi gi6 t6"><div class="gi-ph">Haldi Ceremony</div><span class="gi-label">Haldi</span></div>
+    <div class="gi gi7 t7"><div class="gi-ph">Sangeet Night</div><span class="gi-label">Sangeet</span></div>
+    <div class="gi gi8 t8"><div class="gi-ph">Floral Decor</div><span class="gi-label">Decor</span></div>
+    <div class="gi gi9 t9"><div class="gi-ph">Family Portraits</div><span class="gi-label">Family</span></div>
+    <div class="gi gi10 t10"><div class="gi-ph">Venue Aerial</div><span class="gi-label">Aerial</span></div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-label reveal"><span>Pricing</span></div>
+  <h2 class="section-title reveal">Transparent packages,<br><em style="font-style:italic;color:var(--gold)">no surprises</em></h2>
+  <p class="section-sub reveal">All packages include edited digital files, private online gallery, full print rights, and a personal wedding day coordinator.</p>
+
+  <div class="packages-grid">
+    <div class="pkg-card reveal">
+      <p class="pkg-tier">Tier 01</p>
+      <p class="pkg-name">Silver</p>
+      <div class="pkg-price-row">
+        <span class="pkg-price">₹45,000</span>
+      </div>
+      <p class="pkg-note">Intimate ceremonies & small events</p>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>6 hours of coverage</li>
+        <li>1 lead photographer</li>
+        <li>300+ edited photos</li>
+        <li>Private online gallery</li>
+        <li>14-day delivery</li>
+        <li>Digital download rights</li>
+      </ul>
+      <button class="pkg-btn" onclick="scrollToContact()">Book Silver →</button>
+    </div>
+
+    <div class="pkg-card featured reveal reveal-delay-1">
+      <div class="pkg-popular">Most Popular</div>
+      <p class="pkg-tier">Tier 02</p>
+      <p class="pkg-name">Gold</p>
+      <div class="pkg-price-row">
+        <span class="pkg-price">₹75,000</span>
+      </div>
+      <p class="pkg-note">Perfect for full wedding days</p>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li class="highlight">Full day coverage (12 hrs)</li>
+        <li class="highlight">2 photographers</li>
+        <li class="highlight">Pre-wedding shoot (2 hrs)</li>
+        <li>600+ edited photos</li>
+        <li>Private online gallery</li>
+        <li>10-day delivery</li>
+        <li>Complimentary couple portrait</li>
+      </ul>
+      <button class="pkg-btn" onclick="scrollToContact()">Book Gold →</button>
+    </div>
+
+    <div class="pkg-card reveal reveal-delay-2">
+      <p class="pkg-tier">Tier 03</p>
+      <p class="pkg-name">Platinum</p>
+      <div class="pkg-price-row">
+        <span class="pkg-price">₹1,20,000</span>
+      </div>
+      <p class="pkg-note">The complete luxury experience</p>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li class="highlight">2-day full coverage</li>
+        <li class="highlight">2 photographers + 1 videographer</li>
+        <li class="highlight">Cinematic highlight film</li>
+        <li>1000+ edited photos</li>
+        <li>Engagement + pre-wedding shoot</li>
+        <li>Premium layflat photo album</li>
+        <li>7-day priority delivery</li>
+        <li>Drone aerials included</li>
+      </ul>
+      <button class="pkg-btn" onclick="scrollToContact()">Book Platinum →</button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label reveal"><span>Love Notes</span></div>
+  <h2 class="section-title reveal">What couples<br><em style="font-style:italic;color:var(--gold)">say about us</em></h2>
+  <p class="scroll-hint reveal">Scroll to read more</p>
+
+  <div class="testimonials-track" style="margin-top:2rem;">
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">ASK Pixels didn't just photograph our wedding — they made us feel at ease from the first hour. When we saw the photos, we cried all over again. Every single frame tells our story perfectly.</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar">P&R</div>
+        <div>
+          <p class="tcard-name">Priya & Rahul Sharma</p>
+          <p class="tcard-event">Wedding · Bangalore · Feb 2024</p>
+          <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">The team was invisible during the ceremony but somehow captured everything. The candids are incredible — emotions I didn't even know were happening around me. Absolutely world-class.</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar">A&K</div>
+        <div>
+          <p class="tcard-name">Ananya & Karthik Reddy</p>
+          <p class="tcard-event">Wedding · Hyderabad · Nov 2023</p>
+          <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">We booked the Platinum package and it was worth every rupee. The cinematic film had our entire family in tears at the screening. The album is a piece of art we'll pass down for generations.</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar">S&V</div>
+        <div>
+          <p class="tcard-name">Sneha & Vikram Nair</p>
+          <p class="tcard-event">Destination Wedding · Goa · Jan 2024</p>
+          <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">Our pre-wedding shoot was a dream. They scouted the location, planned everything, and made us laugh the entire time. The photos look like they're from a film. Cannot recommend enough.</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar">D&M</div>
+        <div>
+          <p class="tcard-name">Deepa & Mohan Iyer</p>
+          <p class="tcard-event">Pre-Wedding · Coorg · Oct 2023</p>
+          <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <p class="tcard-text">Booked ASK Pixels for my company's annual event. The professionalism was outstanding — on time, unobtrusive, and the photos were delivered in 3 days. Will book for every event going forward.</p>
+      <div class="tcard-author">
+        <div class="tcard-avatar">RK</div>
+        <div>
+          <p class="tcard-name">Rajan Kumar</p>
+          <p class="tcard-event">Corporate Event · Bangalore · Mar 2024</p>
+          <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-label reveal"><span>Book a Session</span></div>
+      <h2 class="section-title reveal">Let's start your<br><em style="font-style:italic;color:var(--gold)">story together</em></h2>
+      <p class="section-sub reveal" style="margin-bottom:3rem;">Share your details and we'll get back within 24 hours with availability and a custom quote tailored to your vision.</p>
+
+      <div class="contact-detail reveal">
+        <p class="cd-label">Phone & WhatsApp</p>
+        <p class="cd-value">+91 98XXX XXXXX</p>
+        <p class="cd-sub">Available Mon–Sat, 9am–7pm IST</p>
+      </div>
+      <div class="contact-detail reveal">
+        <p class="cd-label">Email</p>
+        <p class="cd-value">hello@askpixels.in</p>
+        <p class="cd-sub">We reply within 24 hours</p>
+      </div>
+      <div class="contact-detail reveal">
+        <p class="cd-label">Studio Location</p>
+        <p class="cd-value">Bangalore, Karnataka</p>
+        <p class="cd-sub">Available pan-India & destination weddings</p>
+      </div>
+      <div class="contact-social reveal">
+        <a href="#" class="soc-btn" aria-label="Instagram">IG</a>
+        <a href="#" class="soc-btn" aria-label="Facebook">FB</a>
+        <a href="#" class="soc-btn" aria-label="YouTube">YT</a>
+        <a href="#" class="soc-btn" aria-label="Pinterest">PT</a>
+      </div>
+    </div>
+
+    <div class="form-wrapper">
+      <div class="form-success" id="formSuccess">
+        <h3>Thank You ✦</h3>
+        <p>We've received your enquiry and will be in touch within 24 hours to discuss your vision and availability.</p>
+      </div>
+      <!-- Web3Forms — get your free key at web3forms.com (250 leads/month free) -->
+      <form id="leadForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Photography Enquiry — ASK Pixels">
+        <input type="hidden" name="from_name" value="ASK Pixels Website">
+        <input type="hidden" name="redirect" value="false">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Priya & Arjun">
+          </div>
+          <div class="form-group">
+            <label for="phone">WhatsApp Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="service">Service Required</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option>Wedding Photography</option>
+              <option>Pre-Wedding Shoot</option>
+              <option>Wedding Videography</option>
+              <option>Photo + Video Package</option>
+              <option>Event Coverage</option>
+              <option>Corporate Event</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="event_date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="venue">Venue / City</label>
+          <input type="text" id="venue" name="venue" placeholder="Venue name & city">
+        </div>
+        <div class="form-group">
+          <label for="budget">Approximate Budget</label>
+          <select id="budget" name="budget">
+            <option value="" disabled selected>Select range</option>
+            <option>Under ₹30,000</option>
+            <option>₹30,000 – ₹60,000</option>
+            <option>₹60,000 – ₹1,00,000</option>
+            <option>₹1,00,000 – ₹2,00,000</option>
+            <option>₹2,00,000+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us About Your Vision</label>
+          <textarea id="message" name="message" rows="4" placeholder="Style preferences, special requirements, inspiration..."></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">
+          <span id="submitText">Send Enquiry →</span>
+        </button>
+        <p class="form-note">We respond within 24 hours · 100% confidential · No spam, ever</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
+        <div class="logo-mark" style="width:36px;height:36px;">
+          <div class="logo-img-placeholder" style="font-size:.6rem;">ASK<br>PX</div>
+        </div>
+        <span class="logo-name">ASK Pixels</span>
+      </div>
+      <p>Visual storytellers capturing the most precious moments of your life — with artistry, heart, and an eye for the extraordinary.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Wedding Photography</a></li>
+        <li><a href="#services">Pre-Wedding Shoot</a></li>
+        <li><a href="#services">Cinematic Films</a></li>
+        <li><a href="#services">Event Coverage</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About ASK Pixels</a></li>
+        <li><a href="#packages">Packages & Pricing</a></li>
+        <li><a href="#gallery">Portfolio</a></li>
+        <li><a href="#contact">Book a Session</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 ASK Pixels Photography Studio. All rights reserved.</p>
+    <p class="footer-made">Crafted with <span>✦</span> in Bangalore, India</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20ASK%20Pixels!%20I'd%20like%20to%20enquire%20about%20your%20photography%20services." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- BACK TO TOP -->
+<a href="#home" class="btt" id="btt" aria-label="Back to top">↑</a>
+
+<script>
+// CURSOR
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let cursorActive = false;
+document.addEventListener('mousemove', e => {
+  if (!cursorActive) { document.body.classList.add('cursor-active'); cursorActive = true; }
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  setTimeout(() => { ring.style.left = e.clientX + 'px'; ring.style.top = e.clientY + 'px'; }, 60);
+});
+document.querySelectorAll('a,button,.service-card,.gi,.pkg-card,.tcard,.sg-item,.about-tag').forEach(el => {
+  el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+  el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+});
+
+// PROGRESS BAR
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+});
+
+// NAV SCROLL
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+// MOBILE MENU
+function toggleMobile() {
+  const menu = document.getElementById('mobileMenu');
+  const ham = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  ham.classList.toggle('open');
+}
+function closeMobile() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+// BACK TO TOP
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('visible', window.scrollY > 500);
+});
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// CONTACT SCROLL
+function scrollToContact() {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+// FORM SUBMIT
+const form = document.getElementById('leadForm');
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const txt = document.getElementById('submitText');
+  txt.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+    const data = await res.json();
+    if (data.success) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      txt.textContent = 'Send Enquiry →';
+      btn.disabled = false;
+      alert('Something went wrong. Please WhatsApp us directly.');
+    }
+  } catch {
+    txt.textContent = 'Send Enquiry →';
+    btn.disabled = false;
+  }
+});
+
+// ACTIVE NAV LINK (scroll spy)
+const sections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navAs.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
